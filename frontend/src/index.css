@@ -687,3 +687,358 @@ body {
 .w {
   color: var(--txt);
 }
+
+/* ── Map search bar ── */
+.map-search-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.map-search-input {
+  flex: 1;
+  background: var(--bg3);
+  border: 0.5px solid var(--nb3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--txt);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.map-search-input::placeholder {
+  color: var(--txt3);
+}
+
+.map-search-input:focus {
+  outline: none;
+  border-color: var(--nb);
+}
+
+.map-search-btn {
+  background: var(--nb2);
+  border: 0.5px solid var(--nb3);
+  color: var(--nb);
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: background 0.2s;
+}
+
+.map-search-btn:hover {
+  background: rgba(0, 212, 255, 0.2);
+}
+
+/* ── Map search & styles ── */
+.map-search-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.map-search-input {
+  flex: 1;
+  background: var(--bg3);
+  border: 0.5px solid var(--nb3);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--txt);
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.map-search-input::placeholder {
+  color: var(--txt3);
+}
+
+.map-search-input:focus {
+  outline: none;
+  border-color: var(--nb);
+}
+
+.map-search-btn {
+  background: var(--nb2);
+  border: 0.5px solid var(--nb3);
+  color: var(--nb);
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: background 0.2s;
+}
+
+.map-search-btn:hover {
+  background: rgba(0, 212, 255, 0.2);
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-box {
+  height: 200px;
+  border-radius: 8px;
+  border: 0.5px solid var(--nb3);
+}
+
+.map-style-toggle {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  z-index: 1000;
+}
+
+.map-style-btn {
+  background: rgba(9, 14, 21, 0.88);
+  border: 0.5px solid var(--nb3);
+  color: var(--txt3);
+  font-size: 10px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.2s;
+}
+
+.map-style-btn.active {
+  background: var(--nb2);
+  color: var(--nb);
+  border-color: var(--nb);
+}
+
+.map-style-label {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(9, 14, 21, 0.88);
+  border: 0.5px solid var(--nb3);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 10px;
+  color: var(--nb);
+  z-index: 1000;
+  pointer-events: none;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Mode selector cards ── */
+.mode-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.mode-card {
+  position: relative;
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 0.5px solid var(--bw2);
+  background: var(--bg2);
+}
+
+.mode-card.expert.active {
+  border-color: var(--ng);
+  background: var(--ng2);
+  box-shadow: 0 0 18px rgba(0, 255, 136, 0.12);
+}
+
+.mode-card.simple.active {
+  border-color: var(--np);
+  background: var(--np2);
+  box-shadow: 0 0 18px rgba(255, 45, 120, 0.12);
+}
+
+.mode-card.expert:hover:not(.active) {
+  border-color: rgba(0, 255, 136, 0.3);
+  background: rgba(0, 255, 136, 0.04);
+}
+
+.mode-card.simple:hover:not(.active) {
+  border-color: rgba(255, 45, 120, 0.3);
+  background: rgba(255, 45, 120, 0.04);
+}
+
+.mode-badge {
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff2d78;
+  color: #05080d;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.mode-icon-wrap {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.mode-icon-wrap.g {
+  background: var(--ng2);
+  border: 0.5px solid var(--ng3);
+}
+
+.mode-icon-wrap.p {
+  background: var(--np2);
+  border: 0.5px solid var(--np3);
+}
+
+.mode-title {
+  font-family: 'Orbitron', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  letter-spacing: 0.5px;
+}
+
+.mode-title.g {
+  color: var(--ng);
+}
+
+.mode-title.p {
+  color: var(--np);
+}
+
+.mode-desc {
+  font-size: 10px;
+  color: var(--txt3);
+  line-height: 1.4;
+  font-family: 'Inter', sans-serif;
+}
+
+.mode-check {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.mode-check.g {
+  background: var(--ng2);
+  border: 0.5px solid var(--ng3);
+}
+
+.mode-check.p {
+  background: var(--np2);
+  border: 0.5px solid var(--np3);
+}
+
+.mode-check.visible {
+  opacity: 1;
+}
+
+/* ── Simple form ── */
+.card-pink {
+  border-color: var(--np3) !important;
+}
+
+.simple-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.s-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.s-label {
+  font-size: 9px;
+  color: var(--txt3);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.s-select {
+  background: var(--bg3);
+  border: 0.5px solid var(--np3);
+  border-radius: 8px;
+  padding: 9px 11px;
+  font-size: 12px;
+  color: var(--np);
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.s-select:focus {
+  outline: none;
+  border-color: var(--np);
+}
+
+.info-box-simple {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--bg3);
+  border: 0.5px solid var(--np3);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 14px;
+}
+
+.info-dot-p {
+  width: 6px;
+  height: 6px;
+  background: var(--np);
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.info-text-p {
+  font-size: 11px;
+  color: var(--txt3);
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+}
+
+.sec-icon-p {
+  background: var(--np2);
+  border: 0.5px solid var(--np3);
+}
+
+/* ── Fade animation ── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
